@@ -1,7 +1,7 @@
 <template>
     <div>
       <p>Serving from <strong v-text="from"/> for <strong v-text="userAgent"/></p>
-      <nuxt-link to="/">Home</nuxt-link>
+      <p>The count is <strong v-text="$store.state.count"/></p>
 
     </div>
 </template>
@@ -9,10 +9,10 @@
 <script>
 
 export default {
-    asyncData({req, isClient}) {
+    asyncData({req, isStatic}) {
         return {
             userAgent: req ? req.headers['user-agent'] : navigator.userAgent,
-            from: isClient ? 'client' : 'server'
+            from: isStatic ? 'static' : process.client ? 'client' : 'server'
         };
     }
 };

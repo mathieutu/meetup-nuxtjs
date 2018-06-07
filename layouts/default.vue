@@ -1,10 +1,17 @@
 <template>
-  <div class="container">
-    <nuxt/>
+  <div>
+    <nav>
+        <nuxt-link to="/">Home</nuxt-link>
+        <nuxt-link to="/about">About</nuxt-link>
+        <nuxt-link to="/counter">Counter</nuxt-link>
+    </nav>
+    <div class="container">
+      <nuxt/>
+    </div>
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
@@ -16,17 +23,21 @@ html {
   box-sizing: border-box;
 }
 
-.container {
-  min-height: 100vh;
+nav, .container {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  a {
+    margin: 10px;
+    &.nuxt-link-exact-active {
+      font-weight: bolder;
+    }
+  }
 }
 
-
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
+.container {
+  min-height: 100vh;
 }
 </style>
