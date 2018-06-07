@@ -4,6 +4,7 @@
         <nuxt-link to="/">Home</nuxt-link>
         <nuxt-link to="/about">About</nuxt-link>
         <nuxt-link to="/counter">Counter</nuxt-link>
+        <a href="/rollandgarros/SM004">Rolland Garros</a>
     </nav>
     <div class="container">
       <nuxt/>
@@ -38,6 +39,6 @@ nav, .container {
 }
 
 .container {
-  min-height: 100vh;
+  min-height: 90vh;
 }
 </style>
