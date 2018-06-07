@@ -11,7 +11,7 @@
 export default {
     asyncData({req, isStatic}) {
         return {
-            userAgent: req ? req.headers['user-agent'] : navigator.userAgent,
+            userAgent: req ? req.headers['user-agent'] : (typeof navigator !== 'undefined' ? navigator.userAgent : 'No user agent (generated)'),
             from: isStatic ? 'static' : process.client ? 'client' : 'server'
         };
     }

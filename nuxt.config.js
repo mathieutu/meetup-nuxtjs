@@ -1,3 +1,10 @@
+// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: 'meetup-nuxtjs'
+  }
+} : {};
+
 module.exports = {
   /*
   ** Headers of the page
@@ -38,4 +45,13 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
   ],
+  generate: {
+    dir: 'docs',
+    routes: [
+      '/rollandgarros/SM004',
+      '/rollandgarros/SM005',
+      '/rollandgarros/SM006',
+    ]
+  },
+    ...routerBase,
 };
