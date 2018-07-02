@@ -45,6 +45,12 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
   ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api': 'https://www.rolandgarros.com/'
+  },
   generate: {
     dir: 'docs',
     routes: [
