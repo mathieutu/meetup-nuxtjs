@@ -4,7 +4,7 @@
         <nuxt-link to="/">Home</nuxt-link>
         <nuxt-link to="/about">About</nuxt-link>
         <nuxt-link to="/counter">Counter</nuxt-link>
-        <a href="/rollandgarros/SM004">Rolland Garros</a>
+        <nuxt-link to="/rollandgarros/SM004">Rolland Garros</nuxt-link>
     </nav>
     <div class="container">
       <nuxt/>

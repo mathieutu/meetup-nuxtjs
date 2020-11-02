@@ -22,7 +22,7 @@
 
 export default {
   async asyncData({$axios, params}) {
-    const {data: {match}} = await $axios.get(`https://www.rolandgarros.com/api/en-us/matches/${params.match}`);
+    const {data: {match}} = await $axios.get(`/api/en-us/matches/${params.match}`);
     return match;
   },
   mounted() {
